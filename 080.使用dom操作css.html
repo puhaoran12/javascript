@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#box{
+				width: 100px;
+				height: 100px;
+				background-color: green;
+			}
+		</style>
+		<script type="text/javascript">
+			window.onload = function(){
+				/*
+				 * 点击按钮以后，修改box1的大小
+				 */
+				//获取btn
+				var btn = document.getElementById("btn");
+				//为按钮绑定单击响应函数
+				btn.onclick = function(){
+					//获取box
+					var box = document.getElementById("box");
+					box.style.width = "200px";
+					box.style.height = "200px";
+				};
+				
+				var btn2 = document.getElementById("btn2");
+				btn2.onclick = function(){
+					var box = document.getElementById("box");
+					box.style.backgroundColor = "yellow";
+					//读取box的样式
+					/*
+					 * 	语法：元素.style.样式名
+					 * 
+					 * 通过style属性设置和读取的都是内联样式
+					 * 	无法读取样式表中的样式
+					 */
+					alert(box.style.height);
+					alert(box.style.backgroundColor);
+				};
+			};
+			
+		</script>
+	</head>
+	<body>
+		<button id="btn">点我一下</button>
+		<button id="btn2">点我一下2</button>
+		<br />
+		<div id="box"></div>
+	</body>
+</html>

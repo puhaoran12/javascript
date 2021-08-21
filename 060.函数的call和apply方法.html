@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			function fun(){
+				//alert("我是fun函数！");
+				alert(this.name);
+			}
+			
+			var obj = {
+				name:"obj",
+				sayNmae:function(){
+					alert(this.name)
+				}
+			}
+			var obj2 = {
+				name:"obj2"
+			}
+			/*
+			 call()和apply()
+			 	这两个方法都是函数对象的方法，需要通过函数对象调用
+			 	当对函数调用call()和apply()都会调用函数执行
+			 	在调用call()和apply()可以将一个对象指定为第一个参数
+			 		此时这个对象将会成为函数执行时的this
+			 */
+			
+			/*fun.call();
+			fun.apply();
+			fun();//这三个调用效果一样*/
+			
+			/*fun.call(obj);
+			fun.apply(obj);
+			fun();//this永远是window*/
+			
+			obj.sayName().apply(obj2);
+			
+			
+			
+			//****修改函数执行时的this
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

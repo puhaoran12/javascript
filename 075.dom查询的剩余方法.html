@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			window.onload = function(){
+				//获取body标签
+				//var body = document.getElementsByTagName("body")[0];
+				/*
+				 在document中有一个属性body，他保存的是body的引用
+				 * */
+				var body = document.body;
+				
+				/*
+				 document.documentElement保存的是html根标签
+				 * */
+				var html = document.documentElement;
+				//console.log(html);
+				
+				/*
+				 document.all代表页面中所有的元素
+				 * */
+				var all = document.all;
+				console.log(all);
+				console.log(all.length);
+				for(var i = 0;i < all.length;i++){
+					console.log(all[i]);
+				};
+				
+				/*
+				 根据元素的class属性值查询一组元素节点对象
+				 getElementsByClassName()可以根据class属性值获取一组元素节点对象，
+				 	但该方法存在兼容性问题
+				 * */
+				//var box = document.getElementsByClassName("box1")
+				//console.log(box[0]);
+				
+				/*
+				 获取页面中所有的div
+				 * */
+				//var div = document.getElementsByTagName("div");
+				//var div2 = div[0].getElementsByTagName("div");
+				//console.log(div2);
+				/*
+				 document.querySelector()
+				 	需要一个选择器的字符串作为参数，可以根据一个css选择器来查询一个元素节点对象
+				 	使用该方法追踪会返回唯一一个元素，如果满足条件的元素有多个，那么它只会返回第一个
+				 * */
+				var div = document.querySelector(".box1 div")
+				var div = document.querySelector(".box1");
+				console.log(div);
+				
+				var div = document.querySelectorAll(".box1 div");
+				console.log(div.length);
+			};
+		</script>
+	</head>
+	<body>
+		<div class="box1">
+			<div>1</div><!--div中只能有一个元素-->
+		</div>
+		<div class="box1">
+			<div>1</div><!--div中只能有一个元素-->
+		</div>
+		<div class="box1">
+			<div>1</div><!--div中只能有一个元素-->
+		</div>
+		
+	</body>
+</html>

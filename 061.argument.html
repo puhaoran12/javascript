@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			/*
+			 
+			 * */
+			function fun(){
+				console.log(arguments instanceof Array);
+				console.log(Array.isArray(arguments));
+				console.log(arguments.length);
+				console.log(arguments[1]);
+				console.log(arguments.callee);
+				console.log(arguments.callee == fun);
+			}
+			fun("hello","word");
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

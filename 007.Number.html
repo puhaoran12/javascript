@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			/*
+			 	在js中所有的数值都是Number类型
+			 		包括整数和浮点数（小数）
+			 		
+			 	js中可以表示的数字的最大值
+			 		Number.MAX_VALUE
+			 		1.7976931348623157e+308
+			 	
+			 	如果使用number表示的数字超过了最大值，则会返回一个Infinit，表示正无穷大
+			 		-Infinit，表示负无穷大
+			 		使用typeof检查Infinit也会返回number
+			 		
+			 	NaN是一个特殊的数字，表示Not A Number
+			 	使用typeof检查一个NaN也会返回number
+			 * */
+			//数字123
+			var a=123;
+			//字符串123
+			var b="123";
+			/*
+			 	可以使用一个云孙峰typeof来检查一个变量的类型
+			 		语法：typeof 变量
+			 		检查字符串时，会返回string
+			 		检查数值时，会返回number
+			 * */
+			console.log(a);
+			console.log(b);
+			
+			console.log(Number.MAX_VALUE);//同理可得最小值，并不是 最大值的相反数
+			var c=1.7976931348623157e+308 * 100;
+			console.log(c);
+			
+			var d="abc"*"bds";
+			console.log(d);
+			console.log(typeof d);
+			
+			//计算
+			/*
+			 	在js中证书的运算基本可以保证精确
+			 * */
+			var e=131+234;
+			/*
+			 	如果使用js进行浮点运算，可能得到一个不精确的结果
+			 * */
+			var e=0.1+0.2;
+			console.log(e);
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

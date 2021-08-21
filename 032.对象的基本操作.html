@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			/*
+			 
+			 * */
+			
+			
+			//创建对象
+			//使用new关键字调用的函数，是构造函数constructor；构造函数是专门用来创建对象的函数
+			
+			var obj = new Object();
+			
+			//console.log(obj);
+			//console.log(typeof obj);
+			
+			/*
+			 	在对象中保存的值称为属性
+			 	向对象添加属性
+			 		语法：对象名.属性名 = 属性值;
+			 		
+			 * */
+			
+			//向obj中添加一个name属性
+			obj.name = "蒲昊苒";
+			obj.age = 18;
+			obj.gender = "男";
+			console.log(obj);
+			
+			/*
+			 	读取对象中的属性
+			 		语法：对象名.属性名
+			 		
+			 	如果读取对象中没有的属性，不会报错而会返回undefined
+			 * */
+			console.log(obj.name);
+			/*
+			 	修改对象的属性值
+			 		语法：对象名.属性名 = 新的属性值;
+			 * */
+			obj.age = 12;
+			console.log(obj.age);
+			
+			/*
+			 	删除对象的属性值
+			 		语法：delete 对象名.属性名;
+			 * */
+			
+			delete obj.name;
+			
+			
+			
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

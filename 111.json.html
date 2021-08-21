@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			var obj = '({"name":"孙悟空","age":18,"gender":"男"})';
+			/*
+			 eval();
+			 	这个函数可以用来执行一段字符串形式的JS代码，并将执行结果返回
+			 	如果使用eval()执行的字符串中含有{},他会将{}当成是代码块
+			 		如果不希望将其当成代码块解析，则需要在字符串的{}之外加一个()
+			 		
+			 	eval()这个函数的功能很强大，可以直接执行一个字符串中的js代码
+			 		但是在开发中尽量不要使用，首先他执行性能差，然后他还具有安全隐患
+			 * */
+			var str = "alert('hello');";
+			
+			var o = eval(obj);
+			console.log(o);
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

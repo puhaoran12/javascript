@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			//创建一个数组
+			var arr = ["孙悟空","猪八戒","沙和尚","唐僧","白龙马"];
+			
+			/*
+			 foreach()方法需要一个函数作为参数
+			 	像这种函数，由我们创建但不由我们调用的，我们称为回调函数
+			 	数组中有几个元素就会执行几次，每次执行时，浏览器会将遍历到的元素
+			 		以实参的形式传递进来，我们可以来定义形参，来读取这些些内容
+			 * */
+			arr.forEach(function(a){
+				console.log(a);
+			})
+			
+		</script>
+	</head>
+	<body>
+	</body>
+</html>
